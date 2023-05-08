@@ -1,5 +1,6 @@
 import 'package:exercise_tracker/widgets/home_card.dart';
 import 'package:flutter/material.dart';
+import 'utils/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 193, 7),
+        backgroundColor: secBackgroundColor,
         appBar: AppBar(
           title: Text(widget.title),
           backgroundColor: Colors.black,

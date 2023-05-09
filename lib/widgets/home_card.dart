@@ -1,5 +1,7 @@
 import 'package:exercise_tracker/screens/add_data_screen.dart';
+import 'package:exercise_tracker/screens/add_exercise_screen.dart';
 import 'package:exercise_tracker/screens/admin_screen.dart';
+import 'package:exercise_tracker/screens/set_schedule_screen.dart';
 import 'package:exercise_tracker/screens/view_data_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,11 +17,17 @@ class HomeCard extends StatelessWidget {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => const AddDataScreen()));
     } else if (pageName.compareTo("View Data") == 0) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const ViewData()));
-    } else if (pageName.compareTo("Add Meta Data") == 0) {
+      Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const ViewDataScreen()));
+    } else if (pageName.compareTo("Admin") == 0) {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => const AdminScreen()));
+    } else if (pageName.compareTo("Set Schedule") == 0) {
+      Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const SetScheduleScreen()));
+    } else if (pageName.compareTo("Add Exercise") == 0) {
+      Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const AddExerciseScreen()));
     }
   }
 

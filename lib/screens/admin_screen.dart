@@ -1,3 +1,4 @@
+import 'package:exercise_tracker/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/home_card.dart';
@@ -10,31 +11,24 @@ class AdminScreen extends StatefulWidget {
 }
 
 class _AdminScreenState extends State<AdminScreen> {
-  TextEditingController _exerciseNameController = TextEditingController();
+  addExercise(String text, String dropdownValue) {}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: secBackgroundColor,
       appBar: AppBar(
         title: const Text("Admin Page"),
+        backgroundColor: Colors.black,
+        elevation: 1,
       ),
-      body: Column(
-        children: [
-          const Text(
-            'Exercise Name:',
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.w600,
-            ),
+      body: ListView(
+        children: const [
+          HomeCard(cardText: "Set Schedule"),
+          SizedBox(
+            height: 5,
           ),
-          const SizedBox(height: 5.0),
-          TextField(
-            controller: _exerciseNameController,
-            decoration: const InputDecoration(
-              hintText: 'Enter Exercise name',
-              border: OutlineInputBorder(),
-            ),
-          ),
+          HomeCard(cardText: "Add Exercise"),
         ],
       ),
     );

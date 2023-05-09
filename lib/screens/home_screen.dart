@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: 5,
             ),
-            HomeCard(cardText: "Add Meta Data"),
+            HomeCard(cardText: "Admin"),
           ],
         ));
   }

@@ -1,5 +1,5 @@
 import 'package:exercise_tracker/screens/add_data_screen.dart';
-import 'package:exercise_tracker/screens/add_meta_data_screen.dart';
+import 'package:exercise_tracker/screens/admin_screen.dart';
 import 'package:exercise_tracker/screens/view_data_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,15 +18,14 @@ class HomeCard extends StatelessWidget {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => const ViewData()));
     } else if (pageName.compareTo("Add Meta Data") == 0) {
-      Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => const AddMetaDataScreen()));
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => const AdminScreen()));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white,
       shadowColor: Colors.black,
       elevation: 5,
       margin: const EdgeInsets.all(10),

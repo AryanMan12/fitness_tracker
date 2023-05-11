@@ -26,6 +26,18 @@ class ExerciseProvider{
     }
     return null;
   }
+  Future<List<Exercise>?> getAllExercises() async {
+    List<Map<String,Object?>> maps = await db.query(tableName,
+        columns: [columnId, columnName,columnTypeId]);
+    if (maps.isNotEmpty) {
+      List<Exercise>? exercises = [];
+      for(int i = 0; i < maps.length; i++){
+        exercises.add(Exercise.fromMap(maps[i]));
+      }
+      return exercises;
+    }
+    return null;
+  }
 
   Future<int> delete(int id) async {
     return await db.delete(tableName, where: '$columnId = ?', whereArgs: [id]);

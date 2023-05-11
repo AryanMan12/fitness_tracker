@@ -35,7 +35,8 @@ class _SetScheduleScreenState extends State<SetScheduleScreen> {
           initialValue: _selectedVals,
           onConfirm: (values) {
             setState(() {
-              for (int i = 0; i < values.length; i++){
+              _selectedVals.clear();
+              for (int i = 0; i < values.length; i++) {
                 _selectedVals.add(values[i]);
               }
             });
